@@ -1,0 +1,44 @@
+body {
+    background-color: rgb(177, 215, 215);
+    text-align: center;
+}
+
+.nav-table {
+    margin: auto;
+}
+
+.banner-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.hero-img {
+    width: 700px;
+    height: 400px;
+    border-radius: 15px;
+}
+
+.data-table {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.back-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+body.profile-body {
+    background-color: initial;
+    text-align: left;
+}
+
+body.profile-body h1 {
+    text-align: center;
+}
+
+.profile-img-container {
+    text-align: left;
+    clip-path: circle(50% at 50% 50%);
+}
