@@ -3,6 +3,7 @@
 <head>
     <title>Student Information Form</title>
     <link rel="stylesheet" href="../CSS/style.css">
+    <script src="../JS/script.js"></script>
 </head>
 <body class="profile-body">
     <h1>PROFILE</h1>
@@ -14,21 +15,21 @@
 
     <h2>Student Information Form</h2>
 
-    <form>
+    <form onsubmit="return validateProfileForm(event)">
         <p>Name:</p>
-        <input type="text" name="name">
+        <input type="text" id="name" name="name">
         <br><br>
 <p>Enrollment No:</p>
-        <input type="text" name="enrollment">
+        <input type="text" id="enrollment" name="enrollment">
 
         <br><br>
 <p>Email:</p>
-        <input type="text" name="email">
+        <input type="text" id="email" name="email">
 
         <br><br>
 
         <p>Mobile Number:</p>
-        <input type="text" name="mobile">
+        <input type="text" id="mobile" name="mobile">
 
         <br><br>
 <p>Gender:</p>

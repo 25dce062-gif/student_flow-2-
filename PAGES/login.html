@@ -1,21 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>login</title>
-        <link rel="stylesheet" href="../CSS/style.css">
-    </head>
-    
-    <body>
-        <h1>Login</h1>
+
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+
+    <script src="../JS/script.js"></script>
+</head>
+
+<body>
+    <h1>Login</h1>
+    <br>
+
+    <form onsubmit="loginCheck(event)">
+
+        <label for="username">Username:</label>
+        <input id="username" name="username" type="text">
+
         <br>
-        <form action="home.html">
-            <label for="username">Username:</label>
-            <input id="username" name="username" required="" type="text">
-            <br>
-            <label for="password">Password:</label>
-            <input id="password" name="password" required="" type="password">
-            <br>
-            <br>
-            <button onclick="home.html">Login</button>
-        </form>
-    </body></html>
+
+        <label for="password">Password:</label>
+        <input id="password" name="password" type="password">
+
+        <br>
+        <br>
+
+        <button type="submit">Login</button>
+
+    </form>
+</body>
+
+</html>
