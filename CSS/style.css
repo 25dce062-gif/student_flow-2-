@@ -1,10 +1,32 @@
+:root {
+    --bg-color: rgb(177, 215, 215);
+    --text-color: #000000;
+    --modal-bg: #ffffff;
+    --btn-bg: #efefef;
+    --banner-bg: #ffeb3b;
+    --banner-text: #000000;
+}
+
+body.dark-theme {
+    --bg-color: #1a1a2e;
+    --text-color: #e0e0e0;
+    --modal-bg: #16213e;
+    --btn-bg: #0f3460;
+    --banner-bg: #e94560;
+    --banner-text: #ffffff;
+}
+
 body {
-    background-color: rgb(177, 215, 215);
+    background-color: var(--bg-color);
+    color: var(--text-color);
     text-align: center;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .nav-table {
     margin: auto;
+    transition: max-height 0.3s ease-out;
+    overflow: hidden;
 }
 
 .banner-container {
@@ -16,21 +38,30 @@ body {
     width: 700px;
     height: 400px;
     border-radius: 15px;
+    object-fit: cover;
 }
 
 .data-table {
     width: 50%;
     margin: 0 auto;
     text-align: center;
+    color: var(--text-color);
+}
+.data-table th, .data-table td {
+    padding: 10px;
 }
 
 .back-btn {
     padding: 10px 20px;
     font-size: 16px;
+    background-color: var(--btn-bg);
+    color: var(--text-color);
+    border: 1px solid #ccc;
+    cursor: pointer;
 }
 
 body.profile-body {
-    background-color: initial;
+    background-color: var(--bg-color);
     text-align: left;
 }
 
@@ -41,4 +72,155 @@ body.profile-body h1 {
 .profile-img-container {
     text-align: left;
     clip-path: circle(50% at 50% 50%);
+}
+
+/* Feature 1: FAQ */
+.faq-section {
+    width: 60%;
+    margin: 40px auto;
+    text-align: left;
+}
+.faq-question {
+    background-color: var(--btn-bg);
+    color: var(--text-color);
+    cursor: pointer;
+    padding: 15px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    transition: 0.4s;
+    margin-top: 10px;
+}
+.faq-answer {
+    padding: 0 15px;
+    background-color: var(--bg-color);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+/* Feature 2: Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+.modal-content {
+    background-color: var(--modal-bg);
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    text-align: left;
+    color: var(--text-color);
+    border-radius: 8px;
+    position: relative;
+}
+.close-modal {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.close-modal:hover {
+    color: var(--text-color);
+}
+
+/* Feature 3: Slider */
+.slider-wrapper {
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.slides {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+}
+.slide {
+    min-width: 100%;
+}
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 10;
+}
+.prev-btn { left: 0; }
+.next-btn { right: 0; }
+
+/* Feature 4: Notification Banner */
+.notification-banner {
+    background-color: var(--banner-bg);
+    color: var(--banner-text);
+    padding: 15px;
+    text-align: center;
+    position: relative;
+}
+.close-banner {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Feature 5: Hamburger Menu & Responsive */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+    margin: 10px auto;
+}
+
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+    .nav-table {
+        display: none;
+    }
+    .nav-table.show {
+        display: table;
+    }
+    .nav-table tr {
+        display: flex;
+        flex-direction: column;
+    }
+    .hero-img, .slider-wrapper {
+        width: 100%;
+    }
+    .data-table {
+        width: 90%;
+    }
+}
+
+/* Feature 6: Theme Toggle Button */
+.theme-toggle-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    padding: 8px 12px;
+    cursor: pointer;
+    background-color: var(--btn-bg);
+    color: var(--text-color);
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }

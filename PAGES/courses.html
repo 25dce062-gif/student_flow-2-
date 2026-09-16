@@ -3,6 +3,7 @@
 <head>
     <title>Courses</title>
     <link rel="stylesheet" href="../CSS/style.css">
+    <script src="../JS/script.js" defer></script>
 </head>
 <body>
     <h1>Courses</h1>
@@ -12,13 +13,24 @@
             <th>Course Name</th>
             <th>Instructor</th>
             <th>Credits</th>
+            <th>Actions</th>
         </tr>
         <tr>
             <td>Computer Science</td>
             <td>M.S. DHONI</td>
             <td>3</td>
+            <td><button id="open-modal-btn" aria-haspopup="dialog" aria-expanded="false">View Details</button></td>
         </tr>
     </table>
+
+    <div id="details-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-content">
+            <span class="close-modal" aria-label="Close Modal" tabindex="0">&times;</span>
+            <h2 id="modal-title">Course Details</h2>
+            <p><strong>Course:</strong> Computer Science</p>
+            <p><strong>Description:</strong> Introduction to programming, data structures, and fundamental computing algorithms.</p>
+        </div>
+    </div>
     <a href="home.html">
         <button class="back-btn">Back to Home</button>
     </a>
