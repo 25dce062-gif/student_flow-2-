@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Campus Events - Student Hub</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <script src="../JS/script.js?v=3" charset="UTF-8" defer></script>
+    <script src="../JS/events.js" charset="UTF-8" defer></script>
+</head>
+
+<body>
+    <button id="theme-toggle" class="theme-toggle-btn">Toggle Theme</button>
+    <div id="notification-banner" class="notification-banner">
+        <span>Welcome to the Student Hub! Stay tuned for upcoming announcements.</span>
+        <span id="close-banner-btn" class="close-banner">&times;</span>
+    </div>
+
+    <h1>Campus Events</h1>
+    <p>Discover and register for upcoming events on campus!</p>
+
+    <button id="hamburger-btn" class="hamburger" aria-expanded="false" aria-controls="nav-table" aria-label="Toggle Navigation">&#9776;</button>
+    <table class="nav-table" id="nav-table">
+        <tr>
+            <td><a href="home.html"><button>Home</button></a></td>
+            <td><a href="attendance.html"><button>Attendance</button></a></td>
+            <td><a href="courses.html"><button>Courses</button></a></td>
+            <td><a href="exam.html"><button>Exam</button></a></td>
+            <td><a href="fees.html"><button>Fees</button></a></td>
+            <td><a href="notice.html"><button>Notice</button></a></td>
+            <td><a href="result.html"><button>Result</button></a></td>
+            <td><a href="profile.html"><button>Profile</button></a></td>
+            <td><a href="weather.html"><button>Weather</button></a></td>
+            <td><a href="events.html"><button>Events</button></a></td>
+            <td><a href="about.html"><button>About Us</button></a></td>
+        </tr>
+    </table>
+
+    <div class="table-controls-wrapper">
+        <input type="text" id="event-search" class="table-search-input" placeholder="Search events by title, description, category, organizer...">
+        
+        <select id="event-filter" class="table-filter-select">
+            <option value="All">All Categories</option>
+            <option value="Technical">Technical</option>
+            <option value="Cultural">Cultural</option>
+            <option value="Sports">Sports</option>
+            <option value="Workshop">Workshop</option>
+            <option value="Seminar">Seminar</option>
+            <option value="Hackathon">Hackathon</option>
+        </select>
+
+        <select id="event-sort" class="table-filter-select">
+            <option value="date-desc">Date: Newest First</option>
+            <option value="date-asc">Date: Oldest First</option>
+            <option value="title-asc">Title: A-Z</option>
+            <option value="title-desc">Title: Z-A</option>
+        </select>
+    </div>
+
+    <div id="events-message" class="weather-message-box" style="display: none;"></div>
+
+    <div id="events-container" class="events-grid">
+        <!-- Events will be dynamically rendered here -->
+    </div>
+
+    <div class="pagination-wrapper">
+        <button id="events-prev" class="pagination-btn">Previous</button>
+        <span id="events-page-info" class="pagination-info">Page 1</span>
+        <button id="events-next" class="pagination-btn">Next</button>
+    </div>
+
+</body>
+</html>

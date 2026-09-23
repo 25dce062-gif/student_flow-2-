@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather - Student Hub</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <script src="../JS/script.js?v=4" charset="UTF-8" defer></script>
+</head>
+<body>
+    <h1>Campus Weather</h1>
+    <p>Get the latest weather updates for your location.</p>
+
+    <!-- Weather Section -->
+    <div id="weather-section" class="weather-container">
+        <div class="weather-header">
+            <h2>Live Forecast</h2>
+            <div class="weather-controls">
+                <select id="weather-city" aria-label="Select City">
+                    <option value="auto">📍 My Location</option>
+                </select>
+                <button id="weather-refresh" class="weather-refresh-btn" aria-label="Refresh Weather">&#x21bb;</button>
+            </div>
+        </div>
+
+        <div id="weather-content">
+            <div id="weather-loading" class="weather-loading">
+                <p>Loading weather...</p>
+            </div>
+            <div id="weather-error" class="weather-error" style="display: none;">
+                <p>Unable to load weather. Please try again.</p>
+            </div>
+            
+            <div id="weather-data" class="weather-data" style="display: none;">
+                <div class="weather-current-main">
+                    <div class="weather-city-name">
+                        <h3 id="current-city-name">Vadodara</h3>
+                    </div>
+                    <div class="weather-temp-info">
+                        <span class="weather-icon-large" id="current-weather-icon">☁️</span>
+                        <div class="temp-cond">
+                            <span id="current-temp" class="current-temp">--°C</span>
+                            <span id="current-condition" class="current-condition">--</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="weather-details">
+                    <div class="weather-detail-item">
+                        <span class="weather-detail-icon">💧</span>
+                        <span>Humidity: <span id="current-humidity">--%</span></span>
+                    </div>
+                    <div class="weather-detail-item">
+                        <span class="weather-detail-icon">💨</span>
+                        <span>Wind: <span id="current-wind">-- km/h</span></span>
+                    </div>
+                    <div class="weather-detail-item">
+                        <span class="weather-detail-icon">🌧️</span>
+                        <span>Rain: <span id="current-rain">-- mm</span></span>
+                    </div>
+                </div>
+
+                <!-- New Expanded Details (Sunrise, Sunset, UV) -->
+                <div class="weather-details" style="margin-top: -10px;">
+                    <div class="weather-detail-item">
+                        <span class="weather-detail-icon">🌅</span>
+                        <span>Sunrise: <span id="current-sunrise">--</span></span>
+                    </div>
+                    <div class="weather-detail-item">
+                        <span class="weather-detail-icon">🌇</span>
+                        <span>Sunset: <span id="current-sunset">--</span></span>
+                    </div>
+                    <div class="weather-detail-item">
+                        <span class="weather-detail-icon">☀️</span>
+                        <span>UV Index: <span id="current-uv">--</span></span>
+                    </div>
+                </div>
+
+                <div class="weather-message-box">
+                    <p id="weather-message">Have a great day!</p>
+                </div>
+
+                <!-- New Hourly Forecast -->
+                <div class="weather-forecast-container">
+                    <h4>Hourly Forecast (Next 24h)</h4>
+                    <div class="weather-forecast" id="hourly-forecast">
+                        <!-- Hourly forecast items will be injected here -->
+                    </div>
+                </div>
+
+                <div class="weather-forecast-container" style="margin-top: 20px;">
+                    <h4>7-Day Forecast</h4>
+                    <div class="weather-forecast" id="weather-forecast">
+                        <!-- Forecast items will be injected here -->
+                    </div>
+                </div>
+
+                <div class="weather-footer">
+                    <small id="weather-last-updated">Last updated: --</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <div style="text-align: center;">
+        <a href="home.html">
+            <button class="back-btn">Back to Home</button>
+        </a>
+    </div>
+</body>
+</html>

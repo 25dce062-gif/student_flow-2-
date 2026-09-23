@@ -1,0 +1,44 @@
+[
+  {
+    "Course Name": "Computer Science",
+    "Instructor": "M.S. DHONI",
+    "Credits": "3",
+    "Actions": "<button id='open-modal-btn' aria-haspopup='dialog' aria-expanded='false'>View Details</button>"
+  },
+  {
+    "Course Name": "Mathematics",
+    "Instructor": "V. SEHWAG",
+    "Credits": "4",
+    "Actions": "<button>View Details</button>"
+  },
+  {
+    "Course Name": "Physics",
+    "Instructor": "S. TENDULKAR",
+    "Credits": "4",
+    "Actions": "<button>View Details</button>"
+  },
+  {
+    "Course Name": "Chemistry",
+    "Instructor": "R. DRAVID",
+    "Credits": "3",
+    "Actions": "<button>View Details</button>"
+  },
+  {
+    "Course Name": "Biology",
+    "Instructor": "V.VS LAXMAN",
+    "Credits": "3",
+    "Actions": "<button>View Details</button>"
+  },
+  {
+    "Course Name": "English Literature",
+    "Instructor": "S. GANGULY",
+    "Credits": "2",
+    "Actions": "<button>View Details</button>"
+  },
+  {
+    "Course Name": "History",
+    "Instructor": "A. KUMBLE",
+    "Credits": "3",
+    "Actions": "<button>View Details</button>"
+  }
+]
